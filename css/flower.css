@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column; /* Change the direction to column */
     align-items: center;
-    justify-content: flex-start; /* Align items to the start of the container */
+    justify-content: center; /* Center items vertically */
     overflow: hidden;
 	color: #FF9494;
 	font-family: courier;
@@ -27,15 +27,18 @@ body{
 #thankyou {
     width: 100%; /* Ensure it spans the full width */
     text-align: center; /* Keep the text centered */
-    margin-top: 20px; /* Add some space at the top */
-    z-index: 1000; /* Ensure it's above other elements if needed */
+    margin-top: 5px; /* Add some space at the top */
+    z-index: 900; /* Ensure it's above other elements if needed */
     position: relative; /* Adjust based on layout needs */
-	margin-bottom: 400px;
-	font-size: 50px;
+	margin-bottom: 180px; /* Reduce bottom margin */
+	font-size: 45px;
 }
-
 .flower{
     position: relative;
+    display: flex;
+    justify-content: center; /* Center flowers horizontally */
+    align-items: flex-end; /* Align flowers to the bottom */
+    height: 50vh; /* Adjust height as needed */
 }
 
 .flower__glass{
@@ -45,6 +48,7 @@ body{
     clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
     opacity: .8;
     position: relative;
+    margin-top: 20px; /* Add margin to separate from other elements */
 }
 
 .flower__glass::after{
@@ -266,6 +270,25 @@ body{
     animation:flower-fall-down-purple  6s 1.2s linear forwards, flower-falling 6s 7.2s linear infinite;
 }
 
+audio {
+    width: 400%; /* Adjust width as needed */
+    max-width: 250px; /* Set a maximum width */
+    margin-top: 10px; /* Add some space at the top */
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #ffe3e1;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-fullscreen-button {
+    color: #000000; /* Change the control icons color */
+}
 
 @keyframes open-flower{
         0%{

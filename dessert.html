@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dessert</title>
+    <link rel="stylesheet" href="css/dessert.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      /* General body styling */
+      body {
+        font-family: Courier;
+        background-color: #FEF9F9;
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #dessertquestion {
+        font-size: 50px;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+    
+      /* Food container styling */
+      .dessert-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+      }
+    
+      .dessert-item {
+        text-align: center;
+        background-color: #ffe3e3;
+        border: 2px solid #ff9494;
+        border-radius: 15px;
+        padding: 20px;
+        width: 250px; /* Increased width for the dessert item */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      }
+    
+      .dessert-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    
+      .dessert-item img {
+        width: 200px; /* Increased image width */
+        height: 200px; /* Increased image height */
+        object-fit: cover;
+        border-radius: 50%; /* Keep the image circular */
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+      }
+    
+      .dessert-item img:hover {
+        transform: scale(1.1);
+      }
+    
+      .red-heart-checkbox {
+        display: none;
+      }
+    
+      .red-heart-checkbox + label {
+        font-size: 18px;
+        display: block;
+        color: #ff6363;
+        margin-top: 8px;
+        cursor: pointer;
+        user-select: none;
+      }
+    
+      .red-heart-checkbox + label:hover {
+        color: #ff4545;
+      }
+    
+      /* Button hover effect */
+    
+    </style>
+  </head>
+  <body>
+    <div id="dessertquestion">Which dessert we eatin mam?</div>
+
+    <div class="dessert-selection">
+      <div class="dessert-item">
+        <img src="food/boba.jpeg" alt="boba" />
+        <input type="checkbox" id="boba" name="dessert" class="red-heart-checkbox" />
+        <label for="boba">
+          Boba
+        </label>
+      </div>
+    
+      <div class="dessert-item">
+        <img src="food/churro.jpg" alt="churro" />
+        <input type="checkbox" id="churro" name="dessert" class="red-heart-checkbox" />
+        <label for="churro">
+          Chocolate pudding
+        </label>
+      </div>
+    
+      <div class="dessert-item">
+        <img src="food/che.jpg" alt="che" />
+        <input type="checkbox" id="che" name="dessert" class="red-heart-checkbox" />
+        <label for="che">
+          Paan Gujiya
+        </label>
+      </div>
+    
+      <div class="dessert-item">
+        <img src="food/mochi.jpg" alt="mochi" />
+        <input type="checkbox" id="mochi" name="dessert" class="red-heart-checkbox" />
+        <label for="mochi">
+          Cheesecake
+        </label>
+      </div>
+    
+      <div class="dessert-item">
+        <img src="food/randombun.jpg" alt="randombun" />
+        <input type="checkbox" id="randombun" name="dessert" class="red-heart-checkbox" />
+        <label for="randombun">
+          Bangali Rasgulla
+        </label>
+      </div>
+    
+      <div class="dessert-item">
+        <img src="food/taiyaki.jpeg" alt="taiyaki" />
+        <input type="checkbox" id="taiyaki" name="dessert" class="red-heart-checkbox" />
+        <label for="taiyaki">
+          Ice Cream
+        </label>
+      </div>
+    </div>
+    
+    </div>
+    <button class="button" onclick="location.href='activities.html'">
+      Continue UWU
+    </button>
+  </body>
+</html>

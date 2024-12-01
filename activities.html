@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link rel="stylesheet" href="css/activities.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      /* General body styling */
+      body {
+        font-family: Courier;
+        background-color: #FEF9F9;
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #activitiequestion {
+        font-size: 50px;
+        margin-bottom: 30px;
+        font-weight: bold;
+      }
+    
+      /* Food container styling */
+      .activity-selection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+      }
+    
+      .activity-item {
+        text-align: center;
+        background-color: #ffe3e3;
+        border: 2px solid #ff9494;
+        border-radius: 15px;
+        padding: 20px;
+        width: 250px; /* Increased width for the activity item */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      }
+    
+      .activity-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    
+      .activity-item img {
+        width: 200px; /* Increased image width */
+        height: 200px; /* Increased image height */
+        object-fit: cover;
+        border-radius: 50%; /* Keep the image circular */
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+      }
+    
+      .activity-item img:hover {
+        transform: scale(1.1);
+      }
+    
+      .red-heart-checkbox {
+        display: none;
+      }
+    
+      .red-heart-checkbox + label {
+        font-size: 18px;
+        display: block;
+        color: #ff6363;
+        margin-top: 8px;
+        cursor: pointer;
+        user-select: none;
+      }
+    
+      .red-heart-checkbox + label:hover {
+        color: #ff4545;
+      }    
+    </style>
+  </head>
+  <body>
+    <div id="activityquestion"><b>What are we doing after?</b></div>
+
+    <div class="activities-selection">
+      <div class="activity-item">
+        <img src="activities/aquarium.jpeg" alt="aquarium" />
+        <input type="checkbox" id="aquarium" name="activities" class="red-heart-checkbox" />
+        <label for="aquarium">
+         </i> Aquarium
+        </label>
+      </div>
+    
+      <div class="activity-item">
+        <img src="activities/arcade.jpeg" alt="arcade" />
+        <input type="checkbox" id="arcade" name="activities" class="red-heart-checkbox" />
+        <label for="arcade">
+         </i> Arcade
+        </label>
+      </div>
+    
+      <div class="activity-item">
+        <img src="activities/cinema.jpeg" alt="cinema" />
+        <input type="checkbox" id="cinema" name="activities" class="red-heart-checkbox" />
+        <label for="cinema">
+         </i> Cinema
+        </label>
+      </div>
+    
+      <div class="activity-item">
+        <img src="activities/keramika.jpg" alt="ceramics" />
+        <input type="checkbox" id="ceramics" name="activities" class="red-heart-checkbox" />
+        <label for="ceramics">
+         </i> Art Gallery
+        </label>
+      </div>
+    
+      <div class="activity-item">
+        <img src="activities/kunsthalle.jpeg" alt="kunsthalle" />
+        <input type="checkbox" id="kunsthalle" name="activities" class="red-heart-checkbox" />
+        <label for="kunsthalle">
+         </i> Museums
+        </label>
+      </div>
+    
+      <div class="activity-item">
+        <img src="activities/park.jpg" alt="park" />
+        <input type="checkbox" id="park" name="activities" class="red-heart-checkbox" />
+        <label for="park">
+         </i> ISKOON
+        </label>
+      </div>
+    </div>
+        </div>
+    <button class="button" onclick="location.href='lastpage.html'">
+      Last page
+    </button>
+  </body>
+</html>

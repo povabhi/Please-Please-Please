@@ -82,3 +82,33 @@ body {
   border: 2px solid #ffe3e1;
   transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
 }
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  #activityquestion {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .activity-item {
+    width: 48%;
+    margin: 1%;
+  }
+  .activity-item img {
+    height: 150px;
+    width: 150px;
+  }
+  .red-heart-checkbox + label {
+    font-size: 16px;
+    padding-left: 30px;
+  }
+  .red-heart-checkbox + label:before {
+    font-size: 20px;
+  }
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}

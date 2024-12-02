@@ -10,7 +10,7 @@
     <div id="thankyou">
       <b>Thank you for being my girlfriend💓</b> <br>
       <audio id="background-audio" autoplay loop style="display: none;">
-        <source src="ed.weba" type="audio/mpeg" />
+        <source src="ed.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
       <button class="button" onclick="playAudioAndChangeText()">A Message For You&lt;3 </button>
@@ -68,18 +68,9 @@
     </div>
     <script>
       function playAudioAndChangeText() {
-        var audio = document.getElementById('background-audio');
-        audio.play();
+        document.getElementById('background-audio').play();
         document.querySelector('.button').innerText = 'Darling you look perfect in my eyes💓';
       }
-
-      // Ensure audio plays on mobile devices
-      document.querySelector('.button').addEventListener('click', function() {
-        var audio = document.getElementById('background-audio');
-        if (audio.paused) {
-          audio.play();
-        }
-      });
     </script>
   </body>
 </html>

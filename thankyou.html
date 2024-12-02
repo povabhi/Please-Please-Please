@@ -11,13 +11,28 @@
 
     <img id="rizz" src="rizz.gif" alt="rizzler god" class="responsive" />
     <br />
-    <audio controls autoplay loop>
+    <audio id="congratsAudio" autoplay loop muted style="display: none;">
       <source src="congratulations.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
     <h1>Don't go yet!</h1>
+    <button class="button" id="playButton">
+      Please Click Me 🥺 
+    </button> <br>
     <button class="button" onclick="location.href='date.html'">
       Click me UWU
     </button>
+    
+    <script>
+      window.addEventListener('load', function() {
+        var audio = document.getElementById('congratsAudio');
+        var playButton = document.getElementById('playButton');
+        playButton.addEventListener('click', function() {
+          audio.muted = false;
+          audio.play();
+          playButton.style.display = 'none';
+        });
+      });
+    </script>
   </body>
 </html>

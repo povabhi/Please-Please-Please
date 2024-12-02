@@ -37,3 +37,22 @@ img {
   border: 2px solid #ff9494;
   box-shadow: 1px 1px 2px #ffe3e1;
 }
+
+audio {
+  max-width: 250px; /* Set a maximum width */
+  margin-top: 10px; /* Add some space at the top */
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #ffe3e1;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-fullscreen-button {
+  color: #000000; /* Change the control icons color */
+}

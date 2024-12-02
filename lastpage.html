@@ -8,12 +8,12 @@
   </head>
   <body>
     <div id="thankyou">
-      <b>Thank you for being my girlfriend💓</b>
-      <h6>Darling you look perfect in my eyes💓</h6><br>
-      <audio controls autoplay loop>
+      <b>Thank you for being my girlfriend💓</b> <br>
+      <audio id="background-audio" autoplay loop style="display: none;">
         <source src="ed.weba" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
+      <button class="button" onclick="playAudioAndChangeText()">Gift For You &lt;3 </button>
     </div>
     <div class="flower">
       <div class="f-wrapper">
@@ -66,5 +66,11 @@
       <div class="flower__glass"></div>
      
     </div>
+    <script>
+      function playAudioAndChangeText() {
+        document.getElementById('background-audio').play();
+        document.querySelector('.button').innerText = 'Darling you look perfect in my eyes💓';
+      }
+    </script>
   </body>
 </html>

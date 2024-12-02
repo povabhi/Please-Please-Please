@@ -68,9 +68,18 @@
     </div>
     <script>
       function playAudioAndChangeText() {
-        document.getElementById('background-audio').play();
+        var audio = document.getElementById('background-audio');
+        audio.play();
         document.querySelector('.button').innerText = 'Darling you look perfect in my eyes💓';
       }
+
+      // Ensure audio plays on mobile devices
+      document.querySelector('.button').addEventListener('click', function() {
+        var audio = document.getElementById('background-audio');
+        if (audio.paused) {
+          audio.play();
+        }
+      });
     </script>
   </body>
 </html>

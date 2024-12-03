@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Be My Valentine</title>
     <link rel="stylesheet" href="css/valentine.css" />
+    <style>
+      #alx {
+        position: absolute;
+        top: 60;
+        left: 0;
+        z-index: 1;
+      }
+    </style>
   </head>
   <body>
     <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
@@ -13,38 +21,12 @@
     </button>
     <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
     <br />
+    <canvas id="alx"></canvas>
     <img src="cat.gif" alt="cat asking question" class="responsive" />
     <audio id="backgroundAudio" autoplay loop>
       <source src="audio.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var audio = document.getElementById("backgroundAudio");
-    audio.muted = false; // Ensure the audio is unmuted
-
-    document.body.addEventListener("click", function () {
-      var playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log("Autoplay prevented:", error);
-        });
-      }
-    });
-  });
-
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
-        });
-    </script>
+    <script src="script1.js"></script>
   </body>
 </html>

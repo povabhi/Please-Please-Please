@@ -464,3 +464,90 @@ audio::-webkit-media-controls-fullscreen-button {
     bottom: 4%;
   }
 }
+
+
+
+.flowerr {
+    position: absolute; /* Change to absolute positioning */
+    bottom: 60px; /* Align to the bottom with a 60px margin */
+    left: 40px; /* Align to the left with a 40px margin */
+    width: 4px;
+    height: 60px;
+    box-shadow: 18px 60px 1px #659d65,
+                16px 60px 1px #035f03,                
+                20px 60px 1px #035f03;
+}
+
+.flowerr.right {
+    left: auto; /* Reset left position */
+    right: 80px; /* Align to the right with an 80px margin */
+    bottom: 60px; /* Align to the bottom with a 60px margin */
+}
+
+.flowerr:before {
+    display: flex;
+    content: "";
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    bottom: -58px;
+    left: -16px;
+    background-color: #659d65;
+    box-shadow: 0px 0px 0px 2px #035f03, 41px 0px 0px 0px #659d65, 41px 0px 0px 2px #035f03;
+    border-radius: 200px 200px 0px 0px;
+}
+.flowerr:after {
+    --petal: rgb(183 191 241);
+    --petal-outline: rgb(191 179 131);
+    --petal-overlap: -11px;
+    --petal-overlap-clr: rgb(204 240 255);
+    display: flex;
+    content: '';
+    background-image: radial-gradient(circle, hsl(62,20%,50%), hsl(62,98%,50%), hsl(62,98%,45%), hsl(62,98%,30%));
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 0px 7px 0 rgb(96, 151, 2),
+        
+                0px -25px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                -20px -20px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                -25px 0px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                -20px 20px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                0px 25px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                20px 20px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                25px 0px 0 var(--petal-overlap) var(--petal-overlap-clr),
+                20px -20px 0 var(--petal-overlap) var(--petal-overlap-clr),
+
+                0px -25px 0 -5px var(--petal),
+                0px -25px 0 -4px var(--petal-outline),
+                
+
+                -20px -20px 0 -5px var(--petal),
+                -20px -20px 0 -4px var(--petal-outline),
+
+                -25px 0px 0 -5px var(--petal),
+                -25px 0px 0 -4px var(--petal-outline),
+
+                -20px 20px 0 -5px var(--petal),
+                -20px 20px 0 -4px var(--petal-outline),
+
+                0px 25px 0 -5px var(--petal),
+                0px 25px 0 -4px var(--petal-outline),
+
+                20px 20px 0 -5px var(--petal),
+                20px 20px 0 -4px var(--petal-outline),
+
+                25px 0px 0 -5px var(--petal),
+                25px 0px 0 -4px var(--petal-outline),
+
+                20px -20px 0 -5px var(--petal),
+                20px -20px 0 -4px var(--petal-outline)                
+                ;
+    animation:spin 4s linear infinite;
+}
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    }
+}

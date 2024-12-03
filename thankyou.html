@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/lastpage.css" />
   </head>
   <body>
-    <div id="thankyou"><b>Thank you</b></div>
+    <div id="thankyou"><b>My Love🫶🏻</b></div>
 
     <img id="rizz" src="rizz.gif" alt="rizzler god" class="responsive" />
     <br />
@@ -19,18 +19,20 @@
     <button class="button" id="playButton">
       Please Click Me 🥺 
     </button> <br>
-    <button class="button" onclick="location.href='date.html'">
-      Click me UWU
+    <button class="button" id="uwuButton" onclick="location.href='date.html'" style="display: none;">
+      Shall we continue our date?
     </button>
     
     <script>
       window.addEventListener('load', function() {
         var audio = document.getElementById('congratsAudio');
         var playButton = document.getElementById('playButton');
+        var uwuButton = document.getElementById('uwuButton');
         playButton.addEventListener('click', function() {
           audio.muted = false;
           audio.play();
           playButton.style.display = 'none';
+          uwuButton.style.display = 'inline-block';
         });
       });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Be My Valentine</title>
+    <title>You Belong With Me</title>
     <link rel="stylesheet" href="css/valentine.css" />
     <style>
       #alx {
@@ -15,12 +15,14 @@
     </style>
   </head>
   <body>
-    <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
+    <section class="background-2">
+      <div id="valentineQuestion"><b>Will you be my valentine?</b></div>
     <button class="answerButton" onclick="location.href='thankyou.html'">
       Yes
     </button>
-    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <button class="answerButton" id="noButton" onclick="handleNoClick()">I no no wanna o(╥﹏╥)o</button>
     <br />
+  
     <canvas id="alx"></canvas>
     <img src="cat.gif" alt="cat asking question" class="responsive" />
     <audio id="backgroundAudio" autoplay loop>
@@ -28,5 +30,6 @@
       Your browser does not support the audio element.
     </audio>
     <script src="script1.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

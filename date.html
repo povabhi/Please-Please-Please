@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Lovers+Quarrel&display=swap" rel="stylesheet">
     <title>Date</title>
     <link rel="stylesheet" href="css/date.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var today = new Date().toISOString().split("T")[0];
-        document.getElementById("dateInput").setAttribute("min", today);
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
-  <body>
+  <body class="background-2">
+  
     <h1 title="choose a date">Are you free on ...</h1>
     <form class="form-group">
       <label>Which day: (select a date)</label>
@@ -23,6 +23,32 @@
         </button>
       </div>
     </form>
+    <img src="lovee.gif" alt="Profile Picture" class="kiss center">
+    <audio id="backgroundAudio" autoplay loop>
+      <source src="sweet.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('backgroundAudio');
+        audio.play();
+
+        document.body.addEventListener('click', function(event) {
+          if (!event.target.closest('button')) {
+            if (audio.paused) {
+              audio.play();
+            } else if (!event.target.closest('form')) {
+              audio.pause();
+            }
+          }
+        });
+
+        document.querySelector('form').addEventListener('click', function() {
+          if (audio.paused) {
+            audio.play();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
-<footer></footer>

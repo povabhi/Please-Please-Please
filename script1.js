@@ -10,20 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     });
+
+    const messages = [
+        "Noo (T ^ T)", "Are you sure kub p mimi ?", "Really Sure jing lorr😢",
+        "I'll be very sad naaa😕", "You're the sunshine of my life nakubb 💐",
+        "Your smile is my favorite 🥰", "You make my heart skip a beat loeiii >< 💓",
+        "nakubb mimi Please🥺", "I'm gonna cry naaa..😭",
+        "You are breaking my heart😭💔"
+    ];
+    let messageIndex = 0;
+
+    document.getElementById("noButton").addEventListener("click", function () {
+        var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+        var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+        yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
+
+        this.textContent = messages[messageIndex];
+        messageIndex = (messageIndex + 1) % messages.length;
+    });
   });
-
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          var yesButton = document.querySelector(
-            'button[onclick*="thankyou.html"]'
-          );
-          var currentFontSize = parseInt(
-            window.getComputedStyle(yesButton).fontSize
-          );
-          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 10px
-        });
-
 
         
         var c = document.getElementById('alx');

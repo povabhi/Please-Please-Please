@@ -105,3 +105,28 @@ audio::-webkit-media-controls-fullscreen-button {
   margin-right: auto;
   margin-bottom: auto;
 }
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .form-group {
+    font-size: 20px;
+  }
+
+  .button, input[type="date"] {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .kiss {
+    height: 40%;
+    width: 50%;
+  }
+}
